@@ -31,10 +31,9 @@ github_username:  rdxNG
 
 # Build settings
 repository: rdxNG/rdxblog.github.io
-remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
-  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.

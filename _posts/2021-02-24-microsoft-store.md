@@ -12,7 +12,8 @@ Windows를 로컬 계정으로 사용하는 경우, 갑자기 (보통 MS계정�
 1. Microsoft Store를 닫는다.
 2. 시작화면을 열고 `cmd`를 입력한 후 나온 '명령 프롬프트'를 우클릭하여 '관리자 권한으로 실행'
 3. 검은 화면이 나오면 `whoami /user` 를 입력하고 엔터
- ```
+
+```text
 사용자 정보
 ----------------
 
@@ -20,8 +21,9 @@ Windows를 로컬 계정으로 사용하는 경우, 갑자기 (보통 MS계정�
 =================== =============================================
 XXXXXXXXXXXXX       S-1-5-XX-...........
 ```
-4.  해당 화면의 SID밑에 있는 S-로 시작하는 전체를 복사한다. 해당 내용을 밑의 문장과 조합해야 한다.
-5. `REG DELETE HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\[[SID]]` [[SID]]를 위에 복사한 S-로 시작하는 내용 전체와 맞바꾼다.
-6. 실행할 명령어가 `REG DELETE HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-XX-.....` 형태가 되었는지 **반드시** 확인하고 엔터.
-7. `WSReset.exe` 명령어를 붙여넣고 엔터
-8. 스토어를 다시 실행하고 '장치 간의 사용' 다이얼로그가 나오는 것을 확인하고 '관심 없음'버튼을 누르면 로그인 없이 정상적으로 앱의 다운로드및 설치가 진행된다.
+
+1.  해당 화면의 SID밑에 있는 S-로 시작하는 전체를 복사한다. 해당 내용을 밑의 문장과 조합해야 한다.
+2. `REG DELETE HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\[[SID]]` [[SID]]를 위에 복사한 S-로 시작하는 내용 전체와 맞바꾼다.
+3. 실행할 명령어가 `REG DELETE HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-XX-.....` 형태가 되었는지 **반드시** 확인하고 엔터.
+4. `WSReset.exe` 명령어를 붙여넣고 엔터
+5. 스토어를 다시 실행하고 '장치 간의 사용' 다이얼로그가 나오는 것을 확인하고 '관심 없음'버튼을 누르면 로그인 없이 정상적으로 앱의 다운로드및 설치가 진행된다.
